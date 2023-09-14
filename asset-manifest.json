@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/otomasyonsitesi/static/css/main.a84f6b27.css",
+    "main.js": "/otomasyonsitesi/static/js/main.7f86f910.js",
+    "index.html": "/otomasyonsitesi/index.html",
+    "main.a84f6b27.css.map": "/otomasyonsitesi/static/css/main.a84f6b27.css.map",
+    "main.7f86f910.js.map": "/otomasyonsitesi/static/js/main.7f86f910.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a84f6b27.css",
+    "static/js/main.7f86f910.js"
+  ]
+}
