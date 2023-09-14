@@ -7,18 +7,12 @@
 .yatay-menu{
     @apply flex lg:gap-10 lg:mr-[100px] mr-2 gap-3 mt-7
 }
-.yatay-menu li a{
-    @apply font-bold px-3 py-1 rounded-lg hover:bg-lime-500 hover:text-slate-50
-}
 
 /* yatay menu css*/
 /* dikey menu css*/
-.dikey-menu{
-    @apply flex flex-col sm:gap-10 mt-[120px] sm:mr-[150px] mr-[120px] gap-3
-}
-.dikey-menu li a{
-    @apply font-bold px-3 py-1 rounded-lg hover:bg-lime-500 hover:text-slate-50
-}
+
+
+
 
 
 

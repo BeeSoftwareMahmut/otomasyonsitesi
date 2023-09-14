@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useMyContext } from "../Context/Context";
 
 const Hero3=()=>{
@@ -10,7 +11,7 @@ const Hero3=()=>{
                 <p>
                     {visionText}
               </p>
-              <a href="/contact"><button>Başvur</button></a>
+              <Link href="/contact"><button>Başvur</button></Link>
             </div>
         </div>
     )
