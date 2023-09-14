@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Main from './Components/Main';
 import About from './Components/About/About';
 import Services from './Components/Services/Service';
@@ -12,19 +12,23 @@ function App() {
   return (
     <ContextProvider>
       <Router>
-        <div>
-          <ToastContainer />
+        
+      <ToastContainer />
+        <Routes>
+        
           {/* Ana sayfa için / adresine yönlendirme */}
-          <Route path="/" exact component={Main} />
+          <Route path="/" exact element={<Main/>} />
           {/* Hakkında sayfası için /about adresine yönlendirme */}
-          <Route path="/about" component={About} />
+          <Route path="/about" element={<About/>} />
           {/* Hizmetler sayfası için /services adresine yönlendirme */}
-          <Route path="/services" component={Services} />
+          <Route path="/services" element={<Services/>} />
           {/* İletişim sayfası için /contact adresine yönlendirme */}
-          <Route path="/contact" component={Contact} />
+          <Route path="/contact" element={<Contact/>} />
           {/* Admin sayfası için /admin adresine yönlendirme */}
-          <Route path="/admin" component={Admin} />
-        </div>
+          <Route path="/admin" element={<Admin/>} />
+        
+    
+        </Routes>
       </Router>
     </ContextProvider>
   );
