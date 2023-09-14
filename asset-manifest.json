@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/otomasyonsitesi/static/css/main.f2339708.css",
-    "main.js": "/otomasyonsitesi/static/js/main.3a04b962.js",
+    "main.css": "/otomasyonsitesi/static/css/main.78131cab.css",
+    "main.js": "/otomasyonsitesi/static/js/main.9f665455.js",
     "index.html": "/otomasyonsitesi/index.html",
-    "main.f2339708.css.map": "/otomasyonsitesi/static/css/main.f2339708.css.map",
-    "main.3a04b962.js.map": "/otomasyonsitesi/static/js/main.3a04b962.js.map"
+    "main.78131cab.css.map": "/otomasyonsitesi/static/css/main.78131cab.css.map",
+    "main.9f665455.js.map": "/otomasyonsitesi/static/js/main.9f665455.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2339708.css",
-    "static/js/main.3a04b962.js"
+    "static/css/main.78131cab.css",
+    "static/js/main.9f665455.js"
   ]
 }
