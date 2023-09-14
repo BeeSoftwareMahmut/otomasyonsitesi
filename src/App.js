@@ -11,20 +11,13 @@ function App() {
 
 
   return (
-   
-      
-   <BrowserRouter>
-   <Routes>
-   <ToastContainer/>
-   <ContextProvider>
-    <Route exact path="/" element={<Main/>} />
-    <Route path="/about" element={<About/>} />
-    <Route path="/services" element={<Services/>} />
-    <Route path="/contact" element={<Contact/>}/>
-    <Route path="/admin" element={<Admin/>}/>
-    </ContextProvider>
-   </Routes>
-   </BrowserRouter>
+    
+    <ContextProvider>
+      <div>
+        <ToastContainer/>
+   <Main/>
+   </div>
+   </ContextProvider>
   
 
   );
