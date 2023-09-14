@@ -6,7 +6,7 @@ import { useMyContext } from '../Context/Context';
 const Hero = () => {
   const { imagesHero } = useMyContext();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loading, setLoading] = useState(true); // Yükleme durumunu izlemek için bir state 
+  const [loading, setLoading] = useState(true);
   const [currentImageUrl, setCurrentImageUrl] = useState(null);
 
   const changeTheImageHandler = (direction) => {
@@ -22,7 +22,7 @@ const Hero = () => {
   useEffect(() => {
     if (imagesHero.length > 0) {
       setCurrentImageUrl(imagesHero[currentImageIndex].imgUrl);
-      setLoading(false); // Veri yüklendikten sonra yükleme durumunu güncelleyin
+      setLoading(false);
     }
     
     const interval = setInterval(() => {
@@ -34,34 +34,30 @@ const Hero = () => {
     };
   }, [currentImageIndex, imagesHero]);
 
- 
-
   return (
-    <div className='relative mt-4'>
-    {loading ? (
-      // Yükleme durumunda bir animasyon kullanın
-      <div className="animate-spin rounded-full border-t-4 border-blue-500 border-solid h-16 w-16"></div>
-    ) : (
-      // Yüklendikten sonra resmi gösterin
-      <img
-        className='h-60 md:h-96 w-screen object-cover'
-        src={currentImageUrl}
-        alt='Hero'
-      />
-    )}
-    <button
-      onClick={() => changeTheImageHandler('left')}
-      className='absolute top-1/2 left-5 font-extrabold text-3xl text-red-600 transform -translate-y-1/2 focus:outline-none'
-    >
-      <FontAwesomeIcon icon={faChevronLeft} />
-    </button>
-    <button
-      onClick={() => changeTheImageHandler('right')}
-      className='absolute top-1/2 right-5 font-extrabold text-3xl text-red-600 transform -translate-y-1/2 focus:outline-none'
-    >
-      <FontAwesomeIcon icon={faChevronRight} />
-    </button>
-  </div>
+    <div className="relative mt-4 h-[75vh] md:h-[100vh] overflow-hidden">
+      {loading ? (
+        <div className="animate-spin rounded-full border-t-4 border-blue-500 border-solid h-16 w-16"></div>
+      ) : (
+        <img
+          className="absolute h-full w-auto transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+          src={currentImageUrl}
+          alt="Hero"
+        />
+      )}
+      <button
+        onClick={() => changeTheImageHandler('left')}
+        className="absolute top-1/2 left-5 font-extrabold text-3xl text-red-600 transform -translate-y-1/2 focus:outline-none"
+      >
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <button
+        onClick={() => changeTheImageHandler('right')}
+        className="absolute top-1/2 right-5 font-extrabold text-3xl text-red-600 transform -translate-y-1/2 focus:outline-none"
+      >
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+    </div>
   );
 };
 
