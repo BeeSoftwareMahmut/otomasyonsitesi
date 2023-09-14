@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import {  createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Main from './Components/Main';
 import About from './Components/About/About';
 import Services from './Components/Services/Service';
@@ -9,27 +9,35 @@ import { ContextProvider } from './Components/Context/Context';
 import { ToastContainer } from 'react-toastify';
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/services",
+      element: <Services />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      path: "/admin",
+      element: <Admin />,
+    },
+  ]);
   return (
     <ContextProvider>
-      <Router>
-        
+      
+        <RouterProvider router={router}></RouterProvider>
       <ToastContainer />
-        <Routes>
         
-          {/* Ana sayfa için / adresine yönlendirme */}
-          <Route path="/" exact element={<Main/>} />
-          {/* Hakkında sayfası için /about adresine yönlendirme */}
-          <Route path="/about" element={<About/>} />
-          {/* Hizmetler sayfası için /services adresine yönlendirme */}
-          <Route path="/services" element={<Services/>} />
-          {/* İletişim sayfası için /contact adresine yönlendirme */}
-          <Route path="/contact" element={<Contact/>} />
-          {/* Admin sayfası için /admin adresine yönlendirme */}
-          <Route path="/admin" element={<Admin/>} />
-        
-    
-        </Routes>
-      </Router>
     </ContextProvider>
   );
 }
